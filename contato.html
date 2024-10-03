@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Portfólio - Emerson Oliveira de Souza</title>
+</head>
+
+<body>
+    <div class="container" style="width: 100%;">
+        <header>
+            <h3 class="header-brand">Portfólio</h3>
+            <nav class="navbar navbar-header">
+                <a class="navbar-link" href="index.html">Início</a>
+                <a class="navbar-link" href="projetos.html">Projetos</a>
+                <a class="navbar-link active" href="contato.html">Contato</a>
+            </nav>
+        </header>
+
+        <main role="main" class="fade">
+            <h1>Contato</h1>
+            <form onsubmit="submitForm(event)">
+                <input type="text" placeholder="Seu nome *" required />
+                <input type="email" placeholder="Seu e-mail *" required />
+                <textarea placeholder="Sua mensagem *" rows="5" required></textarea>
+                <br />
+                <button class="button" type="submit">Enviar formulário</button>
+            </form>
+
+            <h1>Onde estou localizado</h1>
+            <img src="img/google-maps-e1707316052388.webp" alt="Foto de Emerson" width="600">
+        </main>
+
+        <footer>
+            <p>
+                Todos os direitos reservados por <a href="https://www.linkedin.com/in/emersonolvr/"
+                    target="_blank">Emerson
+                    Oliveira</a>.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('main').classList.add('fade-in');
+        });
+    </script>
+    <script defer>
+        function submitForm(event) {
+            console.log(event);
+            event.preventDefault();
+
+            window.alert('Formulário enviado com sucesso!');
+        }
+    </script>
+</body>
+
+</html>
